@@ -64,7 +64,7 @@ function notice(msg) {
         new notifier.WindowsToaster().notify({
             title: "alarm clock",
             message: msg,
-            icon: path.join(__dirname, 'clock.ico'),
+            icon: path.join(__dirname, 'clock.png'),
             sound: true
         });
     }
@@ -72,7 +72,7 @@ function notice(msg) {
         notifier.notify({
             title: "alarm clock",
             message: msg,
-            icon: path.join(__dirname, 'clock.ico'),
+            icon: path.join(__dirname, 'clock.png'),
             sound: true
         });
     }

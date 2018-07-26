@@ -2,7 +2,8 @@ const {
     app,
     BrowserWindow,
     Tray,
-    Menu
+    Menu,
+    nativeImage
 } = require('electron')
 
 
@@ -61,6 +62,7 @@ function createWindow() {
 function createTray() {
     let appIcon = null
     const iconPath = path.join(__dirname, 'clock.png')
+    
 
     const contextMenu = Menu.buildFromTemplate([{
             label: 'AlarmClock',
@@ -77,7 +79,10 @@ function createTray() {
         }
     ]);
 
-    appIcon = new Tray(iconPath)
+    let trayIcon = nativeImage.createFromPath(iconPath);
+    trayIcon = trayIcon.resize({ width: 16, height: 16 });
+    appIcon = new Tray(trayIcon)
+
     appIcon.setToolTip('Alarm Clock')
     appIcon.setContextMenu(contextMenu)
 

@@ -11,9 +11,9 @@ grunt.config.init({
             exe: 'AlarmClock.exe',
             description: 'alarm clock',
             noMsi: true,
-            loadingGif: 'clock.ico',
-            setupIcon: 'clock.ico',
-            icon: 'clock.ico',
+            loadingGif: 'clock.png',
+            setupIcon: 'clock.png',
+            icon: 'clock.png',
         }
     }
 })
